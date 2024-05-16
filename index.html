@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/blockly"></script>
+    <script src="https://unpkg.com/blockly/lua_compressed.js"></script>
+    <script src="https://unpkg.com/blockly/blockly.min.js"></script>
+    <link href="styles/index.css" rel="stylesheet">
+    <title>Dev environment</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div id="blocklyDiv" style="height: 1000px; width: 800px; float: left;"></div>
+            <div class="buttons-textarea-container">
+                <div class="buttons-container">
+                    <button class="add_button" id="blocks-to-code">Blocks to Code</button>
+                    <button class="generate" id="code-to-blocks">Code to Blocks</button>
+                    <button class="test_button" id="test">Init tests</button>
+                    <button class="api_button" id="API">API</button>
+                    <label for="tests">Choose a test set:</label>
+
+                    <select name="tests" id="tests">
+                        <option value="logic">Logic</option>
+                        <option value="loops">Loops</option>
+                        <option value="math">Math</option>
+                        <option value="text">Text</option>
+                        <option value="lists">Lists</option>
+                        <option value="additional">Additional</option>
+                        <option value="variables">Variables</option>
+                        <option value="custom_functions">customFunctions</option>
+                        <option value="function_definitions">LOVE2D callbacks</option>
+                        <option value="function_calls">LOVE2D calls</option>
+                        <option value="big">Big</option>
+                        <option value="both_way_check">Test Code Generation</option>
+                    </select>
+                </div>
+            </div>
+            <textarea id="textInput" style="height: 1000px; width: 800px;" placeholder="Type something..."></textarea>
+        </div>
+        <script src="scripts/tree-sitter.js"></script>
+        <script src="scripts/helpFunctions.js"></script>
+        <script src="scripts/Classes/MyNodes/MyNode.js"></script>
+        <script src="scripts/Classes/MyNodes/NumberNode.js"></script>
+        <script src="scripts/Classes/MyNodes/VariableNode.js"></script>
+        <script src="scripts/Classes/MyNodes/UnaryExpressionNode.js"></script>
+        <script src="scripts/Classes/MyNodes/StringNode.js"></script>
+        <script src="scripts/Classes/MyNodes/BooleanNode.js"></script>
+        <script src="scripts/Classes/MyNodes/NilNode.js"></script>
+        <script src="scripts/Classes/MyNodes/IdentifierNode.js"></script>
+        <script src="scripts/Classes/MyNodes/TableNode.js"></script>
+        <script src="scripts/Classes/MyNodes/FunctionCallNode.js"></script>
+        <script src="scripts/Classes/MyNodes/BinaryExpressionNode.js"></script>
+        <script src="scripts/Classes/MyNodes/ParenthesizedExpressionNode.js"></script>
+        <script src="scripts/Classes/MyNodes/ShebangNode.js"></script>
+        <script src="scripts/Classes/MyNodes/VariableAssignmentNode.js"></script>
+        <script src="scripts/Classes/MyNodes/LocalVariableNode.js"></script>
+        <script src="scripts/Classes/MyNodes/CommentNode.js"></script>
+        <script src="scripts/Classes/MyNodes/BreakNode.js"></script>
+        <script src="scripts/Classes/MyNodes/EmptyLineNode.js"></script>
+        <script src="scripts/Classes/MyNodes/IfElseIfElseNode.js"></script>
+        <script src="scripts/Classes/MyNodes/ForNumericNode.js"></script>
+        <script src="scripts/Classes/MyNodes/ForGenericNode.js"></script>
+        <script src="scripts/Classes/MyNodes/WhileNode.js"></script>
+        <script src="scripts/Classes/MyNodes/FunctionDefinitionNode.js"></script>
+        <script src="scripts/Classes/MyNodes/ReturnNode.js"></script>
+        <script src="scripts/Classes/MyNodes/RepeatNode.js"></script>
+        <script src="scripts/Classes/Distributor/Distributor.js"></script>
+        <script src="scripts/toolbox.js"></script>
+        <script src="scripts/allBlocks.js"></script>
+        <script src="scripts/registerBlocks.js"></script>
+        <script src="scripts/main.js"></script>
+        <script src="tests/tests.js"></script>
+    </main>
+</body>
+</html>
