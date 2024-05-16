@@ -816,7 +816,8 @@ const custom_functions = [
     "        return n\n" +
     "    end\n" +
     "\n" +
-    "    local a, b = 0, 1\n" +
+    "    local a = 0" +
+    "    local b = 1\n" +
     "    for i = 2, n do\n" +
     "        local temp = b\n" +
     "        b = a + b\n" +
